@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+// import Conversor from './componentes/Conversor';
+import ConversorF from './componentes/ConversorF';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Conversor de moedas</h1>
+      <div className='linha'>
+      <ConversorF moedaA="USD" moedaB="BRL" />
+      <ConversorF moedaA="BRL" moedaB="USD" />
+      </div>
+      <div className='linha'>
+      <ConversorF moedaA="USD" moedaB="EUR" />
+      <ConversorF moedaA="EUR" moedaB="USD" />
+      </div>
+      <div className='linha'>
+      <ConversorF moedaA="CAD" moedaB="BRL" />
+      <ConversorF moedaA="BRL" moedaB="CAD" />
+      </div>
+      <footer>
+        <p>Feito por <a href='https://ingriddev.netlify.app/'>Ingrid Souza</a></p>
+      </footer>
     </div>
   );
 }
